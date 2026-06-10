@@ -1,0 +1,29 @@
+{
+  "report_name": "corrupted_quality",
+  "overall_passed": false,
+  "checks": {
+    "row_count_check": {
+      "description": "At least 5 rows present",
+      "passed": true,
+      "value": 21
+    },
+    "paper_id_check": {
+      "description": "paper_id not null, not empty, and unique",
+      "passed": false,
+      "unique": false,
+      "not_null_or_empty": true
+    },
+    "title_check": {
+      "description": "title not null and not empty",
+      "passed": true
+    },
+    "summary_length_check": {
+      "description": "summary length >= 10 characters",
+      "passed": false
+    },
+    "freshness_check": {
+      "description": "all papers age_days <= 180",
+      "passed": false
+    }
+  }
+}

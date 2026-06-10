@@ -4,6 +4,13 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
 
+import sys
+try:
+    import pysqlite3
+    sys.modules["sqlite3"] = pysqlite3
+except ImportError:
+    pass
+
 import chromadb
 import pandas as pd
 
